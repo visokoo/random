@@ -1,0 +1,22 @@
+<html>
+<form action='/new' class='form-inline' method='POST'>
+<h1> Add to the neverending list</h1>
+      <fieldset>
+        <p>
+          <label>Item to be added</label>
+          <input type = "text"
+            name='task'
+            id = "itemName"/>
+        </p>
+         <p>
+          <label>Done or not? (t=1,f=0)</label>
+          <input type = "text"
+            name='done'
+            id = "itemStatus"/>
+        </p>
+<p> Both fields are required. </p>
+  <input type="submit" name="Add" value="Add">
+  <a href="/" class="btn btn-primary"><button type='submit'>Cancel</button></a>
+  </fieldset>
+</form>
+</html>

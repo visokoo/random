@@ -1,0 +1,13 @@
+<html>
+<h1>Delete Task</h1>
+<fieldset>
+<p>Are you sure you want to delete:</p>
+<blockquote><p><%= @item.task %></p></blockquote>
+
+<form action="/delete/<%= @item.id %>" method="POST" class="form-wrapper cf">
+    <input type="submit" name="ok" value="OK">
+    <a href="/" class="btn btn-primary"><button type='submit'>Cancel</button></a>
+</form>
+
+</fieldset>
+</html>

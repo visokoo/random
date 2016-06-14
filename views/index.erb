@@ -1,0 +1,24 @@
+<html>
+<h1> TO DO LIST! </h1>
+<fieldset>
+<ul id="todo-list" class="unstyled">
+  <% @item.each do |item| %>
+
+<li id="<%= item[:id] %>">
+  <span class="item">
+  <%= item[:done] ? "<del>#{item[:task]}</del>" : item[:task] %>
+  </span>
+  <span class="pull-right">
+  <form action="/item/<%= item[:id] %>" method="POST">
+  <input type='submit' value="<%= item[:done] ? "Not done" : "Done"%>"/>
+  </form>
+  <a href="/delete/<%= item[:id] %>" class="btn btn-delete"><button type='submit'>Delete</button></a>
+  </span>
+  </li> </br>
+  <% end %>
+</ul>
+
+<a href="/new" class="btn btn-primary"><button type='submit'>Add todo item</button></a>
+</fieldset>
+
+</html>
