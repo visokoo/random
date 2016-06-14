@@ -6,12 +6,12 @@ require 'data_mapper'
 DataMapper::setup(:default, 'mysql://root@localhost/list')
 
 class Item
-  include DataMapper::Resource
-  
-  property :id,	Serial
-  property :task, Text, :required => true
-  property :done, Boolean, :default => false, :required => true
-  property :created, DateTime
+	include DataMapper::Resource
+	  
+	property :id,	Serial
+	property :task, Text, :required => true
+	property :done, Boolean, :default => false, :required => true
+	property :created, DateTime
 end
 Item.auto_upgrade!
 DataMapper.finalize
