@@ -18,5 +18,6 @@ suites:
     run_list:
       - recipe[webapp::default]
       - recipe[webapp::database]
+      - recipe[webapp::unicorn]
     attributes:
     
