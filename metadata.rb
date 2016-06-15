@@ -1,0 +1,13 @@
+name 'webapp'
+maintainer 'visokoo'
+maintainer_email 'vivian@avvo.com'
+license 'all_rights'
+description 'Installs/Configures tasklist webapp'
+long_description 'Installs/Configures webapp'
+version '0.2.0'
+
+depends 'apt', '~> 4.0.0'
+depends 'mysql', '~> 7.0.0'
+depends 'mysql2_chef_gem', '~> 1.1.0'
+depends 'database', '~> 5.1.2'
+#depends 'unicorn', '~> 1.0.1'

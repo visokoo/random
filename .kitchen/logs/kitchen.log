@@ -1,3 +1,0 @@
-I, [2016-06-14T17:54:29.451977 #5180]  INFO -- Kitchen: -----> Starting Kitchen (v1.9.2)
-I, [2016-06-14T17:54:29.768289 #5180]  INFO -- Kitchen: -----> Converging <default-ubuntu-1404>...
-E, [2016-06-14T17:54:44.887734 #5180] ERROR -- Kitchen: Converge failed on instance <default-ubuntu-1404>.
