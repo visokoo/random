@@ -1,4 +1,10 @@
 DEPENDENCIES
+  global_config
+    git: git@gitlab.corp.avvo.com:cookbooks/global_config
+    revision: 5094b20e2922bc2c1c92b7102082098842a16dcd
+  unicorn
+    git: git@gitlab.corp.avvo.com:cookbooks/unicorn
+    revision: 3e10a93551a9132208e1bfa5995d46055c993c50
   webapp
     path: .
     metadata: true
@@ -15,6 +21,8 @@ GRAPH
   compat_resource (12.10.6)
   database (5.1.2)
     postgresql (>= 1.0.0)
+  global_config (0.1.3)
+  logrotate (1.9.2)
   mariadb (0.3.1)
     apt (>= 0.0.0)
     yum (>= 0.0.0)
@@ -41,8 +49,9 @@ GRAPH
   smf (2.2.8)
     rbac (>= 1.0.1)
   tar (0.7.0)
-  unicorn (2.1.2)
-    build-essential (>= 0.0.0)
+  unicorn (1.0.7)
+    global_config (>= 0.0.0)
+    logrotate (>= 0.0.0)
   webapp (0.2.1)
     apt (~> 4.0.0)
     database (~> 5.1.2)

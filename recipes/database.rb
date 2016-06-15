@@ -48,3 +48,7 @@ execute "initialize #{node['webapp']['database']['dbname']} database" do
   command "mysql -h #{node['webapp']['database']['host']} -u #{node['webapp']['database']['root_username']} -p#{node['webapp']['database']['root_password']} -D #{node['webapp']['database']['dbname']} < #{create_tables_script_path}"
   not_if  "mysql -h #{node['webapp']['database']['host']} -u #{node['webapp']['database']['root_username']} -p#{node['webapp']['database']['root_password']} -D #{node['webapp']['database']['dbname']} -e 'describe items;'"
 end
+
+link '/var/run/mysqld/mysqld.sock' do 
+  to '/run/mysql-default/mysqld.sock'
+end

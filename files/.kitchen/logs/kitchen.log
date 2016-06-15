@@ -1,0 +1,32 @@
+I, [2016-06-15T13:15:14.532832 #14387]  INFO -- Kitchen: -----> Starting Kitchen (v1.9.2)
+E, [2016-06-15T13:15:14.533190 #14387] ERROR -- Kitchen: ------Exception-------
+E, [2016-06-15T13:15:14.533229 #14387] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2016-06-15T13:15:14.533297 #14387] ERROR -- Kitchen: Message: Kitchen YAML file /Users/vivian/Git/cookbooks/webapp/files/.kitchen.yml does not exist.
+E, [2016-06-15T13:15:14.533315 #14387] ERROR -- Kitchen: ----------------------
+E, [2016-06-15T13:15:14.533327 #14387] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-06-15T13:15:14.533339 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/loader/yaml.rb:74:in `read'
+E, [2016-06-15T13:15:14.533351 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/config.rb:154:in `data'
+E, [2016-06-15T13:15:14.533363 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/config.rb:133:in `suites'
+E, [2016-06-15T13:15:14.533375 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/config.rb:184:in `filter_instances'
+E, [2016-06-15T13:15:14.533388 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/config.rb:143:in `build_instances'
+E, [2016-06-15T13:15:14.533400 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/config.rb:119:in `instances'
+E, [2016-06-15T13:15:14.533412 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/command.rb:115:in `filtered_instances'
+E, [2016-06-15T13:15:14.533424 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/command.rb:145:in `parse_subcommand'
+E, [2016-06-15T13:15:14.533436 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/command/action.rb:38:in `block in call'
+E, [2016-06-15T13:15:14.533448 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/rubies/ruby-2.0.0-p643/lib/ruby/2.0.0/benchmark.rb:281:in `measure'
+E, [2016-06-15T13:15:14.533460 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/command/action.rb:37:in `call'
+E, [2016-06-15T13:15:14.533473 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/cli.rb:56:in `perform'
+E, [2016-06-15T13:15:14.533484 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/cli.rb:184:in `block (2 levels) in <class:CLI>'
+E, [2016-06-15T13:15:14.533496 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2016-06-15T13:15:14.533508 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2016-06-15T13:15:14.533520 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/cli.rb:325:in `invoke_task'
+E, [2016-06-15T13:15:14.533532 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2016-06-15T13:15:14.533544 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2016-06-15T13:15:14.533556 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/bin/kitchen:13:in `block in <top (required)>'
+E, [2016-06-15T13:15:14.533568 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/lib/kitchen/errors.rb:174:in `with_friendly_errors'
+E, [2016-06-15T13:15:14.533580 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/gems/test-kitchen-1.9.2/bin/kitchen:13:in `<top (required)>'
+E, [2016-06-15T13:15:14.533592 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/bin/kitchen:23:in `load'
+E, [2016-06-15T13:15:14.533604 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/bin/kitchen:23:in `<main>'
+E, [2016-06-15T13:15:14.533626 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `eval'
+E, [2016-06-15T13:15:14.533639 #14387] ERROR -- Kitchen: /Users/vivian/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `<main>'
+E, [2016-06-15T13:15:14.533650 #14387] ERROR -- Kitchen: ----End Backtrace-----

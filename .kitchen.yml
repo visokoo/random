@@ -1,6 +1,9 @@
 ---
 driver:
   name: vagrant
+  network:
+    - ["forwarded_port", { guest: 8080, host: 8080 }]
+    - ["private_network", { ip: "10.0.2.15" }]
 
 provisioner:
   name: chef_zero
@@ -9,6 +12,8 @@ provisioner:
   environments_path: ../../avvo_chef/environments
   roles_path: ../../avvo_chef/roles
   encrypted_data_bag_secret_key_path: ../../avvo_chef/encrypted_data_bag_secret
+  client_rb:
+    environment: stag
 
 platforms:
   - name: ubuntu-14.04

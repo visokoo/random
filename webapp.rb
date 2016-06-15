@@ -2,8 +2,7 @@ require 'sinatra'
 require 'rubygems'
 require 'data_mapper'
 
-
-DataMapper::setup(:default, 'mysql://root@localhost/list')
+DataMapper::setup(:default, 'mysql://root:password@localhost/list')
 
 class Item
 	include DataMapper::Resource
@@ -16,6 +15,7 @@ end
 Item.auto_upgrade!
 DataMapper.finalize
 
+class Webapp < Sinatra::Base
 
 get '/' do
   @item = Item.all(:order => :created.desc)
@@ -53,4 +53,6 @@ post '/item/:id' do
   item.done = !item.done
   item.save
   redirect '/'
+end
+
 end

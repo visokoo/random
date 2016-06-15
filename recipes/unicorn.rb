@@ -10,3 +10,8 @@ unicorn_app 'webapp' do
   listen '0.0.0.0:8080'
   path '/srv/webapp'
 end
+
+execute "unicorn -D" do
+  cwd "/srv/webapp"
+  action :run
+end

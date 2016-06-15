@@ -36,10 +36,18 @@ directory '/srv/webapp' do
   action :create
 end
 
+cookbook_file '/srv/webapp/config.ru' do
+	source 'config.ru'
+	owner 'root'
+	group 'root'
+	mode '0600'
+end
+
 tar_extract '/srv/webapp.tar.gz' do
   action :extract_local
   target_dir '/srv/webapp'
   creates '/srv/webapp/views'
 end
+
 
 
