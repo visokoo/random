@@ -18,8 +18,8 @@ DataMapper.finalize
 
 
 get '/' do
-  @items = Item.all(:order => :created.desc)
-  redirect '/new' if @items.empty?
+  @item = Item.all(:order => :created.desc)
+  redirect '/new' if @item.empty?
   erb :index
 end
 
@@ -29,7 +29,7 @@ get '/new' do
 end
 
 post '/new' do
-  Item.create(:task => params[:task], :created => Time.now)
+  Item.create(:task => params[:task], :done => params[:done], :created => Time.now)
   redirect '/'
 end
 
@@ -48,3 +48,9 @@ post '/delete/:id' do
   end
 end
 
+post '/item/:id' do
+  item = Item.first(:id => params[:id])
+  item.done = !item.done
+  item.save
+  redirect '/'
+end
