@@ -1,8 +1,11 @@
 require 'sinatra'
 require 'rubygems'
 require 'data_mapper'
+DB_HOST=ENV['DB_HOST'] || "localhost"
+DB_PASS=ENV['DB_PASS'] || "password"
+DB_USER=ENV['DB_USER'] || "root"
 
-DataMapper::setup(:default, 'mysql://root:password@localhost/list')
+DataMapper::setup(:default, "mysql://#{DB_USER}:#{DB_PASS}@#{DB_HOST}/list")
 
 class Item
 	include DataMapper::Resource

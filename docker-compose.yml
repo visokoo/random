@@ -1,0 +1,25 @@
+version: '2'
+services:
+ mysql:
+  image: mysql:5.7
+  environment: 
+   - MYSQL_USER=root
+   - MYSQL_ROOT_PASSWORD=root
+   - MYSQL_DATABASE=list
+  volumes:
+   - ./mysqldb:/var/lib/mysql
+  ports: 
+   - 3306:3306
+ webapp:
+  image: vivian/webapp:latest
+  environment:
+   - DB_HOST=mysql
+   - DB_PASS=root
+  depends_on:
+   - mysql
+  links:
+   - mysql:mysql
+  ports:
+   - 8080:8080
+
+
