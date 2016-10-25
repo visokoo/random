@@ -4,7 +4,7 @@ maintainer_email 'vivian@avvo.com'
 license 'all_rights'
 description 'Installs/Configures tasklist webapp'
 long_description 'Installs/Configures webapp'
-version '0.2.1'
+version '0.2.2'
 
 depends 'apt', '~> 4.0.0'
 depends 'mysql', '~> 7.0.0'
