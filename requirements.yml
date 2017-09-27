@@ -4,7 +4,7 @@ stack_name: webapp
 image: visokoo/vwebapp
 facing: frontend
 routing:
-  lb_port: 8080
+  subdomain: vwebapp
   path: /
   port: 8080
   protocol: http
