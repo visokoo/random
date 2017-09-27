@@ -1,7 +1,7 @@
 ---
 service_name: webapp
 stack_name: webapp
-image: visokoo/random:webappv0.1
+image: visokoo/vwebapp
 facing: frontend
 routing:
   lb_port: 8080
