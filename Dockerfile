@@ -1,6 +1,10 @@
 FROM ubuntu:latest
 MAINTAINER Vivian Ta
 
+ARG SOURCE_COMMIT=0
+RUN echo $SOURCE_COMMIT
+ENV COMMIT_HASH $SOURCE_COMMIT
+
 COPY Gemfile .
 RUN mkdir -m 755 /srv/webapp && chown root:root /srv/webapp
 COPY files/config.ru /srv/webapp/config.ru
