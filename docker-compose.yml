@@ -11,7 +11,7 @@ services:
   ports: 
    - 3306:3306
  webapp:
-  image: vivian/webapp:latest
+  image: visokoo/random:webapp_v0.1
   environment:
    - DB_HOST=mysql
    - DB_PASS=root
