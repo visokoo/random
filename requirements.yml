@@ -1,0 +1,11 @@
+---
+service_name: webapp
+stack_name: webapp
+image: visokoo/random:webappv0.1
+facing: frontend
+routing:
+  lb_port: 8080
+  path: /
+  port: 8080
+  protocol: http
+
