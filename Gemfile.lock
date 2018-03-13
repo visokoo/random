@@ -59,7 +59,7 @@ GEM
     kgio (2.10.0)
     multi_json (1.12.1)
     rack (1.6.4)
-    rack-protection (1.5.3)
+    rack-protection (1.5.5)
       rack
     raindrops (0.16.0)
     sinatra (1.4.7)
